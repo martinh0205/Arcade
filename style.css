@@ -3,19 +3,46 @@ main {
     display: flex;
     width: 80vh;
     flex-wrap: wrap;
-    text-align: center;
+
+    
+
     
    
 }
+
 
 .cell {
     width:20vh;
     height: 20vh;
     font-size: 12vh;
-    border: 1px solid black;
+    border: 1px  solid black;
+    
+
 }
 
-main {
+body {
+    background-color: rgb(228, 228, 228);
+    color: rgb(14, 69, 14);
+    font-family: 'Source Code Pro', monospace;
     text-align: center;
+
+   
+    
+
+    
 }
 
+
+
+#title {
+    display: flex;
+    justify-content: center;
+
+}
+
+:hover {
+    cursor: pointer;
+}
+
+
+ 
