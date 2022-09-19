@@ -122,7 +122,6 @@ function gameOver() {
     !state.board[1].includes(null) &&
     !state.board[2].includes(null)
   ) {
-    console.log("The GAME IS OVER");
     resultElemn.innerText = `It's a tie! Game Over!`;
     gameActive = false;
   }
@@ -136,7 +135,6 @@ function render() {
 }
 // event listeners
 boardElem.addEventListener("click", function (event) {
-  console.log("click", event.target.innerText);
   if (gameActive === false) {
     return;
   } else if (event.target.innerText === "X" || event.target.innerText === "O") {
@@ -150,27 +148,22 @@ boardElem.addEventListener("click", function (event) {
       const [row, column] = event.target.dataset.index.split(",");
       state.board[Number(row)][Number(column)] = "X";
       changePlayer();
-      console.log("Current Player", state.players[state.currentPlayerIDX]);
       render();
     } else if (state.players[0]) {
       const [row, column] = event.target.dataset.index.split(",");
       state.board[Number(row)][Number(column)] = "O";
       changePlayer();
-      console.log("Current Player", state.players[state.currentPlayerIDX]);
       render();
     }
   }
 });
 
 playerTurnElem.addEventListener("click", function (event) {
-  console.log("click");
   if (event.target.className !== "start") {
     return;
   }
   const player1Input = document.querySelector("input[name=player1]");
   const player2Input = document.querySelector("input[name=player2]");
-  console.log("player1Input", player1Input.value);
-  console.log("player2Input", player2Input.value);
   state.players[0] = player1Input.value;
   state.players[1] = player2Input.value;
   render();
