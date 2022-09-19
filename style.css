@@ -1,8 +1,10 @@
 
 main {
-    display: flex;
-    width: 80vh;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 250px;
+    margin: 30px auto;
+    justify-content: center;
 
     
 
@@ -15,7 +17,8 @@ main {
     width:20vh;
     height: 20vh;
     font-size: 12vh;
-    border: 1px  solid black;
+    border: 2px  solid black;
+    background-color: rgb(250, 250, 250);;
     
 
 }
@@ -23,8 +26,9 @@ main {
 body {
     background-color: rgb(228, 228, 228);
     color: rgb(14, 69, 14);
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Oswald', sans-serif;
     text-align: center;
+   
 
    
     
@@ -33,16 +37,28 @@ body {
 }
 
 
-
 #title {
-    display: flex;
-    justify-content: center;
-
+    font-size: 40px–
 }
 
 :hover {
     cursor: pointer;
 }
 
+button {
+    border:none;
+    background-color: white;
+    color: rgb(14, 69, 14);
+  
+}
+
+#result {
+    color: rgb(231, 134, 101);
+    font-size: 50px;
+}
+
+#player-turn {
+    font-size: 25px;
+}
 
  
